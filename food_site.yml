@@ -8,10 +8,13 @@
     yum:
       name: git
       state: present
-        
-  - name: Host code
-    git: 
-    repo: https://github.com/Anu-Opp/food3.git
-    dest: /var/wwww/html
 
-...
+  - name: Host code
+    git:
+      repo: https://github.com/Anu-Opp/food3.git
+      dest: /var/www/html
+      version: master
+      force: yes
+      update: yes
+      accept_hostkey: yes
+
