@@ -3,11 +3,10 @@
   hosts: g1
   become: yes
   vars:
-  mygitname: App-Opp
+    mygitname: App-Opp
 
   tasks:
-  - name: update dynamic page
-    template:
-     src: dynamic-page.j2
-     dest: /var/www/html/dynamic-page.html
-...
+    - name: Update dynamic page
+      template:
+        src: dynamic-page.j2
+        dest: /var/www/html/dynamic-page.html
